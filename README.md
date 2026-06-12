@@ -1,5 +1,5 @@
 # ⚔️ GitHub Battle
-Live URl:https://papaya-pothos-f86428.netlify.app/
+Live URL:https://papaya-pothos-f86428.netlify.app/
 
 A web app to search GitHub users and battle two developers based on their total GitHub stars.
 
