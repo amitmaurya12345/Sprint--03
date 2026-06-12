@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>GitHub Battle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Mode Toggle -->
+    <div class="mode-toggle-wrapper">
+      <button class="mode-toggle" id="modeToggle">
+        <span class="mode-icon">⚔️</span>
+        <span class="mode-text">Battle Mode</span>
+        <span class="mode-indicator" id="modeIndicator">OFF</span>
+      </button>
+    </div>
+
+    <!-- Single Search Mode -->
+    <div class="search-section" id="singleSearchSection">
+      <form class="search-form" id="searchForm">
+        <input 
+          type="text" 
+          id="usernameInput" 
+          class="search-input" 
+          placeholder="Enter GitHub username (e.g., octocat)" 
+          autocomplete="off"
+          aria-label="GitHub username"
+        />
+        <button type="submit" class="search-button">
+          <span>🔍</span> Search
+        </button>
+      </form>
+      <div class="example-hint">
+        <span class="hint-tag">octocat</span>
+        <span class="hint-tag">torvalds</span>
+        <span class="hint-tag">mojombo</span>
+      </div>
+    </div>
+
+    <!-- Battle Mode (Hidden by default) -->
+    <div class="battle-section" id="battleSection" style="display: none;">
+      <div class="battle-header">
+        <span class="battle-vs-icon">⚡</span>
+        <span>Enter two GitHub usernames to battle!</span>
+      </div>
+      <div class="battle-inputs">
+        <div class="battle-input-group">
+          <label class="battle-label">🥊 Player 1</label>
+          <input 
+            type="text" 
+            id="player1Input" 
+            class="search-input battle-input" 
+            placeholder="e.g., torvalds" 
+            autocomplete="off"
+          />
+        </div>
+        <div class="battle-vs">VS</div>
+        <div class="battle-input-group">
+          <label class="battle-label">🥊 Player 2</label>
+          <input 
+            type="text" 
+            id="player2Input" 
+            class="search-input battle-input" 
+            placeholder="e.g., octocat" 
+            autocomplete="off"
+          />
+        </div>
+      </div>
+      <button class="battle-button" id="battleButton">
+        ⚔️ Start Battle!
+      </button>
+    </div>
+
+    <!-- Dynamic Content Area -->
+    <div class="card-container" id="cardContainer">
+      <div class="idle-state">
+        <div class="idle-icon">🐙</div>
+        <div>Search for a GitHub user or start a battle!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modular JavaScript Files (Load in correct order) -->
+  <script src="js/formatter.util.js"></script>
+  <script src="js/calculator.util.js"></script>
+  <script src="js/renderer.ui.js"></script>
+  <script src="js/api.service.js"></script>
+  <script src="js/storage.service.js"></script>
+  <script src="js/app.controller.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
