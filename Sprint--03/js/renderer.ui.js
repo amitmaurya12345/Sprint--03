@@ -89,9 +89,12 @@ const UIRenderer = (function(formatter) {
         />
         <h2 class="user-name">${formatter.escapeHTML(displayName)}</h2>
         ${userData.bio ? `<p class="bio">${formatter.escapeHTML(userData.bio)}</p>` : ''}
-        <div class="meta-info">
-          <span class="join-date">📅 ${formatter.escapeHTML(joinDate)}</span>
-        </div>
+        
+     <div class="meta-info">
+       <span class="join-date">
+       <i class="fa-regular fa-calendar-days"></i> ${formatter.escapeHTML(joinDate)}
+       </span>
+    </div>
         <a href="${formatter.escapeHTML(userData.html_url)}" target="_blank" rel="noopener noreferrer" class="portfolio-link">
           🌐 GitHub Profile
         </a>
