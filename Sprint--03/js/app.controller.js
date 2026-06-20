@@ -147,8 +147,8 @@ const AppController = (function(api, calculator, renderer, storage) {
       container.innerHTML = renderer.renderBattleResults(
         winner, loser, winnerStars, loserStars, repos1.length, repos2.length, stars1 === stars2
       );
-    } catch {
-      // Silent background update fail
+    } catch (error) {
+      console.warn(`Background battle faild for "${player1}" vs "${player2}":`, error.message)
     }
   }
   
