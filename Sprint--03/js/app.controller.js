@@ -49,7 +49,7 @@ const AppController = (function(api, calculator, renderer, storage) {
         container.innerHTML = renderer.renderSingleProfile(userData, repos);
       }
     } catch(error) {
-      console.warn(`Background update failed for "${username}":`,error);
+      console.warn(`Background update failed for "${username}":`,error.message);
     }
   }
   
