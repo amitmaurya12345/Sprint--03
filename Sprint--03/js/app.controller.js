@@ -49,7 +49,7 @@ const AppController = (function(api, calculator, renderer, storage) {
         container.innerHTML = renderer.renderSingleProfile(userData, repos);
       }
     } catch {
-      // Silent background update fail
+      console.warn('Background update faild:',error);
     }
   }
   
