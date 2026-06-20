@@ -48,8 +48,8 @@ const AppController = (function(api, calculator, renderer, storage) {
       if (container.innerHTML.includes(username)) {
         container.innerHTML = renderer.renderSingleProfile(userData, repos);
       }
-    } catch {
-      console.warn('Background update faild:',error);
+    } catch(error) {
+      console.warn('Background update failed:',error);
     }
   }
   
